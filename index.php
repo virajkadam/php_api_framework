@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$data = $_GET['call'];
+	$data = $_POST['call'];
 	$obj = new v1();
 	if (method_exists('v1', $data)) {
 		$obj->$data();
